@@ -45,13 +45,13 @@ for(i = 0 ; i <= numbers.length ; i++ ){
 
 // 5. Find the lowest number in the array and print it to the console using console.log()
 
-let low = 100;
+let low = numbers[0];
 for(i = 0 ; i <= numbers.length ; i++ ){
     if (numbers[i] < low){
         low = numbers[i];
     }
-    console.log(max);
 }
+console.log(low);
 
 // 6. Find the even numbers in the array and print them to the console using console.log()
 
