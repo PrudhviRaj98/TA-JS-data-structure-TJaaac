@@ -3,10 +3,56 @@ let numbers = [6, 8, 10, 12, 43, 56, 98];
 let userIds = [1230, 234, 1278, 984, 763, 900];
 
 // 1. Add all the values of numbers and userIds array into the new newly created array named `collection`
-
+let collection = [];
+let sum = 0;
+let sumIds = 0;
+for(let i = 0 ; i <= numbers[i] ; i++){
+  sum = numbers[i] + sum;
+  for(let i = 0 ; i <= userIds[i] ; i++){
+    sumIds = userIds[i] + sum;
+  }
+}
+collection.push(sum);
+collection.push(sumIds);
+console.log(collection);
 // 2. Add all the even numbers from both arrays numbers and userIds into a newly created array named `evenCollection`
 
+let evenCollection = [];
+for(let even of numbers){
+  if(even % 2 === 0){
+    evenCollection.push(even);
+  }
+}
+for(let evenIds of userIds){
+  if(evenIds % 2 === 0){
+    evenCollection.push(evenIds);
+  }
+}
+console.log(evenCollection);
+
+
 // 3. Add all the odd numbers from both arrays numbers and userIds into a newly created array named `oddCollection`
+
+let oddCollection = [];
+let sum = 0;
+let sumIds = 0;
+for(var num of numbers){
+  if (num % 2 != 0){
+    sum = sum + num;
+    oddCollection.push(sum);
+    reru
+  }
+}
+console.log(oddCollection);
+for(var numids of userIds){
+  if (numids % 2 != 0){
+    sumIds = sumIds + numids;
+    oddCollection.push(sumIds);
+  }
+}
+console.log(oddCollection);
+
+
 
 /*
   @param means parameter
@@ -24,8 +70,10 @@ let userIds = [1230, 234, 1278, 984, 763, 900];
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
 
-function times() {
-  // Your code
+function times(numA , numB) {
+  let hfd = [];
+  hfd.push(numA , numB)
+  return hfd;
 }
 
 // Uncomment the code below and test the output
@@ -48,8 +96,14 @@ function times() {
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function revert() {
-  // your code
+function revert(numA , numB , numC , numD) {
+  let reee = [];
+  let second = [];
+  reee.push(numA , numB , numC , numD);
+  for(i = reee.length  ; i >= reee[0] ; i--){
+    second.push(i);
+  }
+  return second;
 }
 
 // Uncomment the code below and test the output
@@ -70,8 +124,15 @@ function revert() {
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function clear() {
-  // your code
+function clear(numA , numB , numC , numD) {
+  let values = [];
+  values.push(numA , numB , numC , numD);
+  for(i = 0 ; i <= values.length ; i++){
+    if(values[i] === null || values[i] === undefined || values[i] === 0 ){
+      values.pop(values[i]);
+      return values;
+    }
+  }
 }
 
 // Uncomment the code below and test the output
@@ -93,8 +154,12 @@ function clear() {
     arrayToObj(['Ryan', 'John']); // {0: 'Ryan', 1: 'John'}
 */
 
-function arrayToObj() {
-  // your code
+function arrayToObj(arr) {
+  let obj ={}
+  for(i=0;i<arr.length;i++){
+    obj[i]=arr[i]
+  }
+  return obj
 }
 
 // Uncomment the code below and test the output
