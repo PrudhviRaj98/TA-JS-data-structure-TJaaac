@@ -11,8 +11,8 @@ let arr2 = arr;
 
 Answer the following with reason after going through the above code:
 
-- `[10] === [10]`
-- What is the value of obj? // answer
+- `[10] === [10]`//false
+- What is the value of obj? // a
 - `obj == newObj`//false
 - `obj === newObj`//false
 - `user === newObj`//false
@@ -37,7 +37,9 @@ console.log(person1);
 console.log(person2);
 ```
 
-Ans:
+Ans: name: 'Alex', age: 25
+ name: 'John', age: 50 
+
 
 3. What will be the output of the below code:
 
