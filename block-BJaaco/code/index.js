@@ -34,20 +34,16 @@ console.log(evenCollection);
 // 3. Add all the odd numbers from both arrays numbers and userIds into a newly created array named `oddCollection`
 
 let oddCollection = [];
-let sum = 0;
-let sumIds = 0;
 for(var num of numbers){
   if (num % 2 != 0){
-    sum = sum + num;
-    oddCollection.push(sum);
+    oddCollection.push(num);
     reru
   }
 }
 console.log(oddCollection);
 for(var numids of userIds){
   if (numids % 2 != 0){
-    sumIds = sumIds + numids;
-    oddCollection.push(sumIds);
+    oddCollection.push(numids);
   }
 }
 console.log(oddCollection);
@@ -70,10 +66,13 @@ console.log(oddCollection);
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
 
-function times(numA , numB) {
-  let hfd = [];
-  hfd.push(numA , numB)
-  return hfd;
+function times(noOfTimes , character = "test") {
+  if(noOfTimes < 1) return [];
+  let final = [];
+  for (let i = 0; i < noOfTimes ; i++){
+    final.push(character);
+  }
+  return final
 }
 
 // Uncomment the code below and test the output
@@ -96,14 +95,12 @@ function times(numA , numB) {
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function revert(numA , numB , numC , numD) {
+function revert(arr) {
   let reee = [];
-  let second = [];
-  reee.push(numA , numB , numC , numD);
   for(i = reee.length  ; i >= reee[0] ; i--){
-    second.push(i);
+    reee.push(arr[i]);
   }
-  return second;
+  return reee;
 }
 
 // Uncomment the code below and test the output
@@ -124,15 +121,14 @@ function revert(numA , numB , numC , numD) {
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function clear(numA , numB , numC , numD) {
+function clear(arr) {
   let values = [];
-  values.push(numA , numB , numC , numD);
-  for(i = 0 ; i <= values.length ; i++){
-    if(values[i] === null || values[i] === undefined || values[i] === 0 ){
-      values.pop(values[i]);
-      return values;
+  for(let value of arr){
+    if(value != null || value != undefined || value != 0 ){
+      values.push(value)
     }
   }
+  return values;
 }
 
 // Uncomment the code below and test the output
