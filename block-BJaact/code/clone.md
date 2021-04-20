@@ -43,11 +43,11 @@ console.log(personTwo.lastName); // deo
 console.log(person.firstName === personTwo.firstName); // false
 console.log(person == personTwo); // false
 console.log(person === personTwo); // false
-console.log(person.address === personTwo.address); // false
-console.log(person.address == personTwo.address); // false
-console.log(personTwo.address.city); // san jose
+console.log(person.address === personTwo.address); // true
+console.log(person.address == personTwo.address); // true
+console.log(personTwo.address.city); // navada
 console.log(person.address.city); // navada
-console.log(person.address.city == personTwo.address.city); // false
+console.log(person.address.city == personTwo.address.city); // true
 ```
 
 3. Write the output with reason:
@@ -70,9 +70,7 @@ person.firstName = 'Arya';
 person.city = 'Navada';
 
 
-let obj1 = {firstName : "john"};
 
-let obj2 = {...obj1};
 
 console.log(personTwo.firstName); // john
 console.log(person.firstName); // arya
@@ -137,7 +135,10 @@ var questions = [
 
 // Your code goes here
 ```
-let questionclone = [...questions];
+let questionclone = [
+  {...questions[0] , responses : [...question[0].responses]}
+  {...questions[1] , responses : [...question[1].responses]}
+];
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
 
@@ -166,7 +167,14 @@ var allBlogs = {
 // Your code goes here
 ```
 let allBlogsClone = {
-  ...allblogs
+  ...allblogs,
+  author:{
+    ...allBlogs.author
+  }
+  comments:[
+    {...allBlogsComments[0]};
+    {...allBlogsComments[1]};
+  ]
 };
 
 7. Clone the `person` variable into a new variable named `clonedPerson`
@@ -201,14 +209,14 @@ let person = [
 
 // Your code goes here
 ```
-let clonedPerson = [...person];
+let clonedPerson = JSON.parse(JSON.stringify(person))
 
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
 
 ```js
-function cloneObject() {
-  
+function cloneObject(obj) {
+  return JSON.parse(JSON.stringify(obj))
 }
 
 // Run the test below to check your function
